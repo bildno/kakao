@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ex51.html -->
+  <title>연습문제15 - 다음 포털의 로그인 화면을 구현하시오</title>
+  <!-- https://accounts.kakao.com/login?continue=https%3A%2F%2Flogins.daum.net%2Faccounts%2Fkdo%3Frescue%3Dtrue%26url%3Dhttps%253A%252F%252Fwww.daum.net -->
+  <style>
+    * { margin: 0; padding: 0; 
+       }
+    #wrap{
+        vertical-align: middle;
+        
+        width: 1000px;
+        margin: 0 auto;
+        padding-top: 150px;
+        
+    }
+  
+    .box{
+        
+        display: flex;
+        flex-direction: row;
+    }
+   #tip{
+       width: 20x; height: 20px;
+       float: left;
+   }
+   
+    #info{
+        width: 400px;
+        height: 250px;
+    }
+    #aside{
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 50%;
+        padding: 40px;
+        flex-grow:1;
+      
+    }
+    
+   #section{
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 40%;
+        padding: 50px;
+        border: 1px solid lightgray;
+       
+   }
+
+   #footer{
+       justify-content: center;
+        margin-top: 50px;
+        padding-top: 10px;
+       text-align: center;
+        border-top: 1px solid lightgray;
+       align-items: center;
+       color: lightgray;
+   }
+
+   a:link{
+       color: black;
+   }
+   a:visited{
+       color: black;
+   }
+   .aaa .join {
+       margin-top: 30px;
+       float: left;
+   }
+   .aaa .bbb {
+       float : right;
+   }
+   .aaa .bbb li {
+       margin-top: 30px;
+       float : left;
+   }
+   .aaa .bbb .ccc {
+       float : left;
+   }
+   
+   a { text-decoration: none;  }
+   li { list-style: none; float: left;}
+  </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="heder" class="box">
+        </div>
+        <div id="nav"class="box">
+        </div>
+
+        <div id="main"class="box">
+
+            <div id="aside"class="box">
+                <h3>카카오 계정으로 Daum을 이용해보세요!</h3>
+                <br>
+                <p style="font-size: 12px;">이제부터 Daum은 카카오계정으로 이용할 수 있습니다.</p>
+                <p style="font-size: 12px;">사용 중인 카카오계정(전화번호 또는 이메일)으로 로그인해 보세요.</p>
+                <br>
+                <div><img id="tip" src="tip.png" alt=""><p id="p3" style="font-size: 12px;">더보기>설정>개인/보안</p></div>
+               
+            
+                <img id="info" src="info.png" alt="">
+            </div>
+            <div id="section"class="box">
+                <h2 style="padding: 20px;">kakao</h2>
+                <br>
+                
+                <input style="padding: 10px; border:0px; border-bottom: 1px solid lightgray" id="input" type="text" placeholder="카카오메일 아이디,이메일,전화번호"><br>
+                <input style="padding: 10px; border:0px; border-bottom: 1px solid lightgray;" id="input" type="password" placeholder="비밀번호">
+                <br>
+          
+            
+               <div style="display: inline-flex;"><img style="width: 40px; height: 40px;" src="radio.png" alt=""><h6 style="padding-top:10px;">로그인 상태 유지</h6>
+               </div> 
+               <br>
+             <div style=" text-align: center;" >
+                <button style="width: 200px; height: 50px; background-color: yellow; width:300px;">로그인</button><br>
+                <br><p style="color:lightgray ;">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ또는ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</p><br>
+                <button style="width:300px; height: 50px; " ><img src="qr.png" alt="">QR코드 로그인</button>
+            </div>
+
+            <div class="aaa">
+                <a href="#" class="join">회원가입</a>
+                <ul class="bbb" id="kakao">
+                <li><a href="#" class="ccc">카카오계정 |</a></li>
+                <li><a href="#" class="ccc">&nbsp;비밀번호 찾기</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>        
+    
+        
+
+        <footer id="footer"class="box" >이용약관 개인정보 처리방침 운영정책 고객센터 공지사항 <br>
+                            Copyright © Kakao Corp. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
